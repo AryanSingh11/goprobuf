@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package pb;
+
+import "proto/rpc_create_user.proto";
+import "google/protobuf/empty.proto";
+
+option go_package="github.com/AryanSingh11/goprobuf/pb";
+
+service SimpleBank{
+    rpc CreateUser(CreateUserRequest)returns(google.protobuf.Empty){}
+}
